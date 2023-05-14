@@ -1,5 +1,6 @@
 public class WrongLoginException extends Exception {
     public WrongLoginException() {
+        super();
     }
 
     public WrongLoginException(String message) {
@@ -16,5 +17,10 @@ public class WrongLoginException extends Exception {
 
     public WrongLoginException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+    }
+
+    @Override
+    public String getMessage() {
+        return super.getMessage();
     }
 }

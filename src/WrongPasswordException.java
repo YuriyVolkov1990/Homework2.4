@@ -1,5 +1,6 @@
 public class WrongPasswordException extends Exception {
     public WrongPasswordException() {
+    super();
     }
 
     public WrongPasswordException(String message) {
@@ -16,5 +17,10 @@ public class WrongPasswordException extends Exception {
 
     public WrongPasswordException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+    }
+
+    @Override
+    public String getMessage() {
+        return super.getMessage();
     }
 }
